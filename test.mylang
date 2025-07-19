@@ -1,0 +1,2 @@
+let number x = 10;
+print x;

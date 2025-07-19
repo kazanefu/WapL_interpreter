@@ -1,0 +1,14 @@
+C:\Users\hayate\source\repos\WapL_interpreter\bin\Debug\net8.0\WapL_interpreter.exe
+C:\Users\hayate\source\repos\WapL_interpreter\bin\Debug\net8.0\WapL_interpreter.deps.json
+C:\Users\hayate\source\repos\WapL_interpreter\bin\Debug\net8.0\WapL_interpreter.runtimeconfig.json
+C:\Users\hayate\source\repos\WapL_interpreter\bin\Debug\net8.0\WapL_interpreter.dll
+C:\Users\hayate\source\repos\WapL_interpreter\bin\Debug\net8.0\WapL_interpreter.pdb
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\WapL_interpreter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\WapL_interpreter.AssemblyInfoInputs.cache
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\WapL_interpreter.AssemblyInfo.cs
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\WapL_interpreter.csproj.CoreCompileInputs.cache
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\WapL_interpreter.dll
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\refint\WapL_interpreter.dll
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\WapL_interpreter.pdb
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\WapL_interpreter.genruntimeconfig.cache
+C:\Users\hayate\source\repos\WapL_interpreter\obj\Debug\net8.0\ref\WapL_interpreter.dll

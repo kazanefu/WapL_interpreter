@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "GD8c43P7YZ8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hayate\\source\\repos\\WapL_interpreter\\WapL_interpreter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hayate\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.18\\microsoft.net.illink.tasks.8.0.18.nupkg.sha512",
+    "C:\\Users\\hayate\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.18\\microsoft.aspnetcore.app.runtime.win-x64.8.0.18.nupkg.sha512",
+    "C:\\Users\\hayate\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.18\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.18.nupkg.sha512",
+    "C:\\Users\\hayate\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.18\\microsoft.netcore.app.runtime.win-x64.8.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

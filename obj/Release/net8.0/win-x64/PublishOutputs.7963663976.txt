@@ -1,0 +1,2 @@
+C:\Users\hayate\source\repos\WapL_interpreter\bin\Release\net8.0\publish\WapL_interpreter.pdb
+C:\Users\hayate\source\repos\WapL_interpreter\bin\Release\net8.0\publish\WapL_interpreter.exe
