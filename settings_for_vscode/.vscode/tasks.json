@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MyLang 実行",
+      "type": "shell",
+      "command": ".vscode/WapL_interpreter.exe",
+      "args": ["${file}"],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
