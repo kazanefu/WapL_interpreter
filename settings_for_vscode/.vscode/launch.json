@@ -5,7 +5,7 @@
       "name": "Run WapL Interpreter",
       "type": "cppvsdbg",        // Windowsならcppvsdbgかdotnet、cmdでの起動はtype: "cppvsdbg"推奨
       "request": "launch",
-      "program": "${workspaceFolder}/.vscode/WapL_interpreter.exe",
+      "program": "${workspaceFolder}/.vscode/wli.exe",
       "args": ["${file}"],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",

@@ -2,9 +2,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "MyLang 実行",
+      "label": "WapL 実行",
       "type": "shell",
-      "command": ".vscode/WapL_interpreter.exe",
+      "command": ".vscode/wli.exe",
       "args": ["${file}"],
       "group": "build",
       "problemMatcher": []
