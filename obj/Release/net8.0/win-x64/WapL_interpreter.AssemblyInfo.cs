@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+381cffef2eee5d717b73ab1256ad41f2edceaf83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03ebae4f9d967b2bfbf04b55e2843585edc6bd8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("wli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

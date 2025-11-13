@@ -114,6 +114,7 @@ class Program
         interpreter.RunCode();
         while (true)
         {
+            Console.Write(">>");
             string input_value = Console.ReadLine() ?? "";
             if(input_value.Trim() == "exit();") { break; }
             else if(input_value.Trim() == "refresh();") { interpreter.ReadInput(); }
@@ -260,7 +261,7 @@ public class WapLInterpreter
                 string labelName = trimmed.Substring(7, trimmed.Length - 8).Trim();
                 if (labelPositions.ContainsKey(labelName))
                 {
-                    if (labelLimit[labelName] >= 10000)
+                    if (labelLimit[labelName] >= 10000000)
                     {
                         Console.WriteLine("無限ループの可能性があります: " + labelName);
                         continue;
@@ -291,7 +292,7 @@ public class WapLInterpreter
                     string label = parts[1].Trim();
                     if (conditionResult == true && labelPositions.ContainsKey(label))
                     {
-                        if (labelLimit[label] >= 10000)
+                        if (labelLimit[label] >= 10000000)
                         {
                             Console.WriteLine("無限ループの可能性があります: " + label);
                             continue;
@@ -343,7 +344,7 @@ public class WapLInterpreter
                 string labelName = line.Substring(7, line.Length - 8).Trim();
                 if (localLabels.ContainsKey(labelName))
                 {
-                    if (localLabellimits[labelName] >= 10000)
+                    if (localLabellimits[labelName] >= 10000000)
                     {
                         Console.WriteLine("無限ループの可能性があります: " + labelName);
                         continue;
@@ -372,7 +373,7 @@ public class WapLInterpreter
                     string label = parts[1].Trim();
                     if (condition == true && localLabels.ContainsKey(label))
                     {
-                        if (localLabellimits[label] >= 10000)
+                        if (localLabellimits[label] >= 10000000)
                         {
                             Console.WriteLine("無限ループの可能性があります: " + label);
                             continue;
@@ -402,7 +403,7 @@ public class WapLInterpreter
     VariableValue EvaluateExpression(string exprInput, Dictionary<string, Variable>? scope = null)
     {
         exprInput = exprInput.Trim();
-        if (exprInput.StartsWith("\"") && exprInput.EndsWith("\"")) return new StringValue(exprInput.Substring(1, exprInput.Length - 2));
+        if (exprInput.StartsWith("\"") && exprInput.EndsWith("\"")) return new StringValue(exprInput.Substring(1, exprInput.Length - 2).Replace("\\n", "\n"));
         if (double.TryParse(exprInput, out double n)) return new F64Value(n);
         if (exprInput == "true") { return new BoolValue(true); } else if (exprInput == "false") { return new BoolValue(false); }
         if ((scope != null && scope.ContainsKey(exprInput))) { scope[exprInput].Value = vmemory.memory[scope[exprInput].ptr]; return scope[exprInput].Value; }
@@ -456,19 +457,30 @@ public class WapLInterpreter
                     VariableValue value = evalpart[1]; // parts[1]
                     SetVariable(name, type, value, scope);
                     return value;
+                case "split":
+                    string[] splitedstrs = VariableToString(To_String(evalpart[0])).Split(VariableToString(To_String(evalpart[1])));
+                    List<VariableValue> strelements = new();
+                    foreach(string e in splitedstrs)
+                    {
+                        strelements.Add(new StringValue(e));
+                    }
+                    return new VecElements(strelements);
                 case "trim":
                     string sourcestr = VariableToString(To_String(evalpart[0]));
                     sourcestr = sourcestr.Trim();
                     return new StringValue(sourcestr);
                 case "input":
                     string input_name = VariableToString(To_String(evalpart[0]));
-                    Console.Write($"入力 [{input_name}]: ");
+                    if(input_name != "")
+                    {
+                        Console.Write($"{input_name}");
+                    }
                     string input_value = Console.ReadLine() ?? "";
                     return new StringValue(input_value);
                 case "print":
                     for (int i = 0; i <= parts.Length - 1; i++)
                     {
-                        Console.WriteLine(VariableToString(To_String(evalpart[i])));
+                        Console.Write(VariableToString(To_String(evalpart[i])));
                     }
                     return evalpart[0];
                 case "println":
@@ -861,12 +873,13 @@ public class WapLInterpreter
     string[] SplitArgs(string input)
     {
         List<string> args = new List<string>();
-        int depth = 0, start = 0;
+        int depth = 0, start = 0,quotation = 0;
         for (int i = 0; i < input.Length; i++)
         {
             if (input[i] == '(') depth++;
             else if (input[i] == ')') depth--;
-            else if (input[i] == ',' && depth == 0)
+            else if (input[i] == '"') quotation++;
+            else if (input[i] == ',' && depth == 0 && quotation%2 == 0)
             {
                 args.Add(input.Substring(start, i - start).Trim());
                 start = i + 1;
