@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\hayate\\source\\repos\\WapL_interpreter\\WapL_interpreter.csproj",
-        "projectName": "WapL_interpreter",
+        "projectName": "wli",
         "projectPath": "C:\\Users\\hayate\\source\\repos\\WapL_interpreter\\WapL_interpreter.csproj",
         "packagesPath": "C:\\Users\\hayate\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hayate\\source\\repos\\WapL_interpreter\\obj\\",
@@ -54,7 +54,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.18, )",
+              "version": "[8.0.21, )",
               "autoReferenced": true
             }
           },
@@ -72,15 +72,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[8.0.18, 8.0.18]"
+              "version": "[8.0.21, 8.0.21]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[8.0.18, 8.0.18]"
+              "version": "[8.0.21, 8.0.21]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[8.0.18, 8.0.18]"
+              "version": "[8.0.21, 8.0.21]"
             }
           ],
           "frameworkReferences": {
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

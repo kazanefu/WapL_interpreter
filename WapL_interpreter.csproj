@@ -7,6 +7,7 @@
 		<SelfContained>true</SelfContained>
 		<PublishSingleFile>true</PublishSingleFile>
 		<PublishTrimmed>true</PublishTrimmed>
+		<AssemblyName>wli</AssemblyName>
 		<!-- これは省略可 -->
 	</PropertyGroup>
 
